@@ -1,0 +1,62 @@
+name: "🐉 校园奶龙目击"
+description: "提交你在校园中发现的奶龙！"
+title: "[奶龙目击] "
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 欢迎投稿！
+
+        请填写以下信息，并上传奶龙照片。
+
+  - type: input
+    id: university
+    attributes:
+      label: "所属高校"
+      placeholder: "例如：提瓦特大学"
+    validations:
+      required: true
+
+  - type: input
+    id: date
+    attributes:
+      label: "发现日期"
+      placeholder: "例如：2026-10-12"
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: "发现地点"
+      description: "请勿填写涉及个人隐私的位置"
+      placeholder: "例如：图书馆"
+    validations:
+      required: false
+
+  - type: upload
+    id: photos
+    attributes:
+      label: "上传奶龙照片"
+      description: "支持 JPG、PNG、WebP 等图片格式"
+    validations:
+      required: true
+      accept: ".jpg,.jpeg,.png,.webp,.gif"
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "奶龙介绍"
+      description: "你可以介绍一下这只奶龙！"
+      placeholder: "今天在学校发现了一只奶龙……"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: "投稿确认"
+      options:
+        - label: "我确认奶龙确实存在，且投稿内容不侵犯他人隐私。"
+          required: true
