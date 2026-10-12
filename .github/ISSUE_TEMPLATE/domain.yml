@@ -1,0 +1,56 @@
+name: "🌐 奶龙访问入口"
+description: "提交奶龙高校域名或相关网站！"
+title: "[奶龙入口] "
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🌐 奶龙高校域名收录
+
+        欢迎提交奶龙高校域名！
+
+        请确保提交的链接可以正常访问。
+        系统将在后续自动检测域名状态。
+
+        **注意：**
+        - 请提交完整的 URL。
+        - 支持中文域名。
+        - 暂不接受包含恶意内容的链接。
+
+  - type: input
+    id: university
+    attributes:
+      label: "所属高校"
+      description: "填写对应高校的正式名称"
+      placeholder: "例如：北京工业大学"
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: "完整访问地址"
+      description: "请填写包含 http:// 或 https:// 的完整 URL，支持中文域名"
+      placeholder: "https://北京奶龙大学.com"
+    validations:
+      required: true
+
+  - type: input
+    id: target
+    attributes:
+      label: "预期跳转目标"
+      description: "如果使用了 URL 重定向，请填写最终目标地址，否则可以留空"
+      placeholder: "https://www.bjut.edu.cn"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: "投稿确认"
+      options:
+        - label: "我确认提交的链接与所填高校相关，且没有跳转到别的大学。"
+          required: true
+        - label: "我理解域名需要经过自动检测与维护者审核后才能收录。"
+          required: true

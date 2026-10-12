@@ -1,0 +1,78 @@
+name: "🎨 奶龙变体收录"
+description: "提交具有高校特色的奶龙形象！"
+title: "[奶龙变体] "
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🎨 奶龙变体收录
+
+        欢迎提交校园特色奶龙形象！
+
+        请提供作品信息及图片。
+
+  - type: input
+    id: university
+    attributes:
+      label: "所属高校"
+      placeholder: "例如：提瓦特大学"
+    validations:
+      required: true
+
+  - type: input
+    id: name
+    attributes:
+      label: "奶龙名称"
+      placeholder: "例如：奶龙"
+    validations:
+      required: true
+
+  - type: upload
+    id: photos
+    attributes:
+      label: "上传奶龙图片"
+      description: "请上传奶龙变体的图片"
+    validations:
+      required: true
+      accept: ".jpg,.jpeg,.png,.webp,.gif"
+
+  - type: input
+    id: creator
+    attributes:
+      label: "创作者"
+      placeholder: "作者名称（可选）"
+
+  - type: input
+    id: source
+    attributes:
+      label: "作品来源"
+      placeholder: "https://..."
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "作品介绍"
+      placeholder: "介绍一下这只奶龙吧！"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: aigc
+    attributes:
+      label: "是否使用 AIGC 生成？"
+      description: "请如实声明作品的 AI 参与情况"
+      options:
+        - "未使用 AIGC"
+        - "部分使用 AIGC（AI 辅助创作）"
+        - "完全由 AIGC 生成"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: "投稿确认"
+      options:
+        - label: "我确认拥有该作品的投稿及展示权限，同时 1+1 确实等于 2。"
+          required: true
